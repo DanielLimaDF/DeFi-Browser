@@ -3,18 +3,48 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4704D41926C0DAE000E4A6F0 /* SimpleNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 4704D41826C0DAE000E4A6F0 /* SimpleNetwork */; };
+		4704D41C26C0EFF500E4A6F0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4704D41B26C0EFF500E4A6F0 /* Kingfisher */; };
+		470927B326A26C7800B54088 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470927B226A26C7800B54088 /* TabBarViewController.swift */; };
+		470927B526A27AD500B54088 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470927B426A27AD500B54088 /* HistoryViewController.swift */; };
+		470927B726A27BAB00B54088 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470927B626A27BAB00B54088 /* HomeCoordinator.swift */; };
+		470927B926A27BC900B54088 /* HistoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470927B826A27BC900B54088 /* HistoryCoordinator.swift */; };
+		470927BB26A2897800B54088 /* IconLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470927BA26A2897800B54088 /* IconLibrary.swift */; };
+		470927BF26A2A0E600B54088 /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = 470927BE26A2A0E600B54088 /* Reusable */; };
+		470927C226A2A3A200B54088 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470927C126A2A3A200B54088 /* CellViewModel.swift */; };
+		470927C426A2A4BC00B54088 /* DefiItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470927C326A2A4BC00B54088 /* DefiItem.swift */; };
+		470927C626A2AA4B00B54088 /* DAppCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470927C526A2AA4B00B54088 /* DAppCellView.swift */; };
+		470927C826A2ABE100B54088 /* CellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470927C726A2ABE100B54088 /* CellProtocol.swift */; };
+		470927CA26A2B18500B54088 /* DAppCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470927C926A2B18500B54088 /* DAppCellViewModel.swift */; };
+		470927CC26A2B2D500B54088 /* DAppCellSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470927CB26A2B2D500B54088 /* DAppCellSection.swift */; };
 		47993E5D267EECBE00B20455 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47993E5C267EECBE00B20455 /* AppDelegate.swift */; };
 		47993E5F267EECBE00B20455 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47993E5E267EECBE00B20455 /* SceneDelegate.swift */; };
-		47993E61267EECBE00B20455 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47993E60267EECBE00B20455 /* ViewController.swift */; };
-		47993E64267EECBE00B20455 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47993E62267EECBE00B20455 /* Main.storyboard */; };
+		47993E61267EECBE00B20455 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47993E60267EECBE00B20455 /* HomeViewController.swift */; };
 		47993E66267EECC700B20455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47993E65267EECC700B20455 /* Assets.xcassets */; };
 		47993E69267EECC700B20455 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47993E67267EECC700B20455 /* LaunchScreen.storyboard */; };
 		47993E74267EECC900B20455 /* DeFi_BrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47993E73267EECC900B20455 /* DeFi_BrowserTests.swift */; };
-		47993E7F267EECC900B20455 /* DeFi_BrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47993E7E267EECC900B20455 /* DeFi_BrowserUITests.swift */; };
+		47993E91267EF65600B20455 /* CoordinatorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 47993E90267EF65600B20455 /* CoordinatorKit */; };
+		47993E97267EF6C300B20455 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47993E96267EF6C300B20455 /* AppCoordinator.swift */; };
+		47993E9A267EF8F000B20455 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 47993E99267EF8F000B20455 /* SnapKit */; };
+		47993E9D267EFBBC00B20455 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47993E9C267EFBBC00B20455 /* HomeView.swift */; };
+		47993E9F267F047400B20455 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47993E9E267F047400B20455 /* ColorPalette.swift */; };
+		47D33003269AA10100A720D2 /* ViewCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D33002269AA10100A720D2 /* ViewCoding.swift */; };
+		47D33006269AA7EF00A720D2 /* HomeSearchHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D33005269AA7EF00A720D2 /* HomeSearchHeaderView.swift */; };
+		47D33008269AAB0E00A720D2 /* SizeToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D33007269AAB0E00A720D2 /* SizeToken.swift */; };
+		47D33046269AB83D00A720D2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D33045269AB83D00A720D2 /* HomeViewModel.swift */; };
+		47D33049269ABA0900A720D2 /* TableViewSectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D33048269ABA0900A720D2 /* TableViewSectionProtocol.swift */; };
+		47D3304B269ABCFE00A720D2 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D3304A269ABCFE00A720D2 /* DataSource.swift */; };
+		47D5274526B4B8E000768D48 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 47D5274426B4B8E000768D48 /* PKHUD */; };
+		47D5274726B4BB4F00768D48 /* AssetCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D5274626B4BB4F00768D48 /* AssetCatalog.swift */; };
+		47D5274926B4BF1300768D48 /* StatefulProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D5274826B4BF1300768D48 /* StatefulProtocol.swift */; };
+		47D5274E26B50A8200768D48 /* DefiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D5274D26B50A8200768D48 /* DefiService.swift */; };
+		47D5275026B50BCD00768D48 /* DefiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D5274F26B50BCD00768D48 /* DefiRouter.swift */; };
+		47D5275326B5197200768D48 /* CollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D5275226B5197200768D48 /* CollectionDataSource.swift */; };
+		47D5275526B5241C00768D48 /* DAppCollectionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D5275426B5241C00768D48 /* DAppCollectionCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,30 +55,46 @@
 			remoteGlobalIDString = 47993E58267EECBE00B20455;
 			remoteInfo = "DeFi Browser";
 		};
-		47993E7B267EECC900B20455 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 47993E51267EECBE00B20455 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 47993E58267EECBE00B20455;
-			remoteInfo = "DeFi Browser";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		470927B226A26C7800B54088 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		470927B426A27AD500B54088 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		470927B626A27BAB00B54088 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		470927B826A27BC900B54088 /* HistoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCoordinator.swift; sourceTree = "<group>"; };
+		470927BA26A2897800B54088 /* IconLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconLibrary.swift; sourceTree = "<group>"; };
+		470927C126A2A3A200B54088 /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
+		470927C326A2A4BC00B54088 /* DefiItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefiItem.swift; sourceTree = "<group>"; };
+		470927C526A2AA4B00B54088 /* DAppCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAppCellView.swift; sourceTree = "<group>"; };
+		470927C726A2ABE100B54088 /* CellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellProtocol.swift; sourceTree = "<group>"; };
+		470927C926A2B18500B54088 /* DAppCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAppCellViewModel.swift; sourceTree = "<group>"; };
+		470927CB26A2B2D500B54088 /* DAppCellSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAppCellSection.swift; sourceTree = "<group>"; };
 		47993E59267EECBE00B20455 /* DeFi Browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DeFi Browser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47993E5C267EECBE00B20455 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47993E5E267EECBE00B20455 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		47993E60267EECBE00B20455 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		47993E63267EECBE00B20455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		47993E60267EECBE00B20455 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		47993E65267EECC700B20455 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47993E68267EECC700B20455 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47993E6A267EECC700B20455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47993E6F267EECC900B20455 /* DeFi BrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DeFi BrowserTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		47993E73267EECC900B20455 /* DeFi_BrowserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeFi_BrowserTests.swift; sourceTree = "<group>"; };
 		47993E75267EECC900B20455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		47993E7A267EECC900B20455 /* DeFi BrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DeFi BrowserUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		47993E7E267EECC900B20455 /* DeFi_BrowserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeFi_BrowserUITests.swift; sourceTree = "<group>"; };
-		47993E80267EECC900B20455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47993E8C267EECD700B20455 /* DeFi Browser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "DeFi Browser.entitlements"; sourceTree = "<group>"; };
+		47993E96267EF6C300B20455 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		47993E9C267EFBBC00B20455 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		47993E9E267F047400B20455 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		47D33002269AA10100A720D2 /* ViewCoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoding.swift; sourceTree = "<group>"; };
+		47D33005269AA7EF00A720D2 /* HomeSearchHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchHeaderView.swift; sourceTree = "<group>"; };
+		47D33007269AAB0E00A720D2 /* SizeToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeToken.swift; sourceTree = "<group>"; };
+		47D33045269AB83D00A720D2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		47D33048269ABA0900A720D2 /* TableViewSectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSectionProtocol.swift; sourceTree = "<group>"; };
+		47D3304A269ABCFE00A720D2 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		47D5274626B4BB4F00768D48 /* AssetCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCatalog.swift; sourceTree = "<group>"; };
+		47D5274826B4BF1300768D48 /* StatefulProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulProtocol.swift; sourceTree = "<group>"; };
+		47D5274D26B50A8200768D48 /* DefiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefiService.swift; sourceTree = "<group>"; };
+		47D5274F26B50BCD00768D48 /* DefiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefiRouter.swift; sourceTree = "<group>"; };
+		47D5275226B5197200768D48 /* CollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDataSource.swift; sourceTree = "<group>"; };
+		47D5275426B5241C00768D48 /* DAppCollectionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAppCollectionCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +102,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4704D41C26C0EFF500E4A6F0 /* Kingfisher in Frameworks */,
+				4704D41926C0DAE000E4A6F0 /* SimpleNetwork in Frameworks */,
+				47993E91267EF65600B20455 /* CoordinatorKit in Frameworks */,
+				47D5274526B4B8E000768D48 /* PKHUD in Frameworks */,
+				47993E9A267EF8F000B20455 /* SnapKit in Frameworks */,
+				470927BF26A2A0E600B54088 /* Reusable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,22 +118,58 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		47993E77267EECC900B20455 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		470927B026A26C2B00B54088 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				470927B426A27AD500B54088 /* HistoryViewController.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		470927B126A26C4F00B54088 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				470927B226A26C7800B54088 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		470927BC26A28A9E00B54088 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				47993E9E267F047400B20455 /* ColorPalette.swift */,
+				47D33007269AAB0E00A720D2 /* SizeToken.swift */,
+				470927BA26A2897800B54088 /* IconLibrary.swift */,
+				47D5274626B4BB4F00768D48 /* AssetCatalog.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		470927C026A2A39500B54088 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				470927C126A2A3A200B54088 /* CellViewModel.swift */,
+				470927C726A2ABE100B54088 /* CellProtocol.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		470927CD26A2B2DE00B54088 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				470927CB26A2B2D500B54088 /* DAppCellSection.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
 		47993E50267EECBE00B20455 = {
 			isa = PBXGroup;
 			children = (
 				47993E5B267EECBE00B20455 /* DeFi Browser */,
 				47993E72267EECC900B20455 /* DeFi BrowserTests */,
-				47993E7D267EECC900B20455 /* DeFi BrowserUITests */,
 				47993E5A267EECBE00B20455 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +179,6 @@
 			children = (
 				47993E59267EECBE00B20455 /* DeFi Browser.app */,
 				47993E6F267EECC900B20455 /* DeFi BrowserTests.xctest */,
-				47993E7A267EECC900B20455 /* DeFi BrowserUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,13 +186,9 @@
 		47993E5B267EECBE00B20455 /* DeFi Browser */ = {
 			isa = PBXGroup;
 			children = (
-				47993E5C267EECBE00B20455 /* AppDelegate.swift */,
-				47993E5E267EECBE00B20455 /* SceneDelegate.swift */,
-				47993E60267EECBE00B20455 /* ViewController.swift */,
-				47993E62267EECBE00B20455 /* Main.storyboard */,
-				47993E65267EECC700B20455 /* Assets.xcassets */,
-				47993E67267EECC700B20455 /* LaunchScreen.storyboard */,
-				47993E6A267EECC700B20455 /* Info.plist */,
+				47993E8C267EECD700B20455 /* DeFi Browser.entitlements */,
+				47993E8E267EF27D00B20455 /* Resources */,
+				47993E8D267EF26F00B20455 /* Source */,
 			);
 			path = "DeFi Browser";
 			sourceTree = "<group>";
@@ -119,13 +202,126 @@
 			path = "DeFi BrowserTests";
 			sourceTree = "<group>";
 		};
-		47993E7D267EECC900B20455 /* DeFi BrowserUITests */ = {
+		47993E8D267EF26F00B20455 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				47993E7E267EECC900B20455 /* DeFi_BrowserUITests.swift */,
-				47993E80267EECC900B20455 /* Info.plist */,
+				47993E5C267EECBE00B20455 /* AppDelegate.swift */,
+				47993E5E267EECBE00B20455 /* SceneDelegate.swift */,
+				47D33001269AA0C300A720D2 /* Components */,
+				47993E95267EF69900B20455 /* Service */,
+				47993E94267EF69100B20455 /* Model */,
+				47993E92267EF66200B20455 /* Coordinator */,
+				47993E93267EF67200B20455 /* Controllers */,
 			);
-			path = "DeFi BrowserUITests";
+			path = Source;
+			sourceTree = "<group>";
+		};
+		47993E8E267EF27D00B20455 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				47993E65267EECC700B20455 /* Assets.xcassets */,
+				47993E67267EECC700B20455 /* LaunchScreen.storyboard */,
+				47993E6A267EECC700B20455 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		47993E92267EF66200B20455 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				47993E96267EF6C300B20455 /* AppCoordinator.swift */,
+				470927B626A27BAB00B54088 /* HomeCoordinator.swift */,
+				470927B826A27BC900B54088 /* HistoryCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		47993E93267EF67200B20455 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				470927B126A26C4F00B54088 /* TabBar */,
+				47993E9B267EF8FF00B20455 /* Home */,
+				470927B026A26C2B00B54088 /* History */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		47993E94267EF69100B20455 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				470927C326A2A4BC00B54088 /* DefiItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		47993E95267EF69900B20455 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				47D5274D26B50A8200768D48 /* DefiService.swift */,
+				47D5274F26B50BCD00768D48 /* DefiRouter.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		47993E9B267EF8FF00B20455 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				470927CD26A2B2DE00B54088 /* Section */,
+				47D3304C269AC16500A720D2 /* Cell */,
+				47D33004269AA7D100A720D2 /* Header */,
+				47993E60267EECBE00B20455 /* HomeViewController.swift */,
+				47D33045269AB83D00A720D2 /* HomeViewModel.swift */,
+				47993E9C267EFBBC00B20455 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		47D33001269AA0C300A720D2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				47D5275126B5192E00768D48 /* CollectionView */,
+				470927BC26A28A9E00B54088 /* Resources */,
+				47D33047269AB9EF00A720D2 /* TableView */,
+				47D33002269AA10100A720D2 /* ViewCoding.swift */,
+				47D5274826B4BF1300768D48 /* StatefulProtocol.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		47D33004269AA7D100A720D2 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				47D33005269AA7EF00A720D2 /* HomeSearchHeaderView.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		47D33047269AB9EF00A720D2 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				470927C026A2A39500B54088 /* Cell */,
+				47D33048269ABA0900A720D2 /* TableViewSectionProtocol.swift */,
+				47D3304A269ABCFE00A720D2 /* DataSource.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		47D3304C269AC16500A720D2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				470927C526A2AA4B00B54088 /* DAppCellView.swift */,
+				47D5275426B5241C00768D48 /* DAppCollectionCellView.swift */,
+				470927C926A2B18500B54088 /* DAppCellViewModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		47D5275126B5192E00768D48 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				47D5275226B5197200768D48 /* CollectionDataSource.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +340,14 @@
 			dependencies = (
 			);
 			name = "DeFi Browser";
+			packageProductDependencies = (
+				47993E90267EF65600B20455 /* CoordinatorKit */,
+				47993E99267EF8F000B20455 /* SnapKit */,
+				470927BE26A2A0E600B54088 /* Reusable */,
+				47D5274426B4B8E000768D48 /* PKHUD */,
+				4704D41826C0DAE000E4A6F0 /* SimpleNetwork */,
+				4704D41B26C0EFF500E4A6F0 /* Kingfisher */,
+			);
 			productName = "DeFi Browser";
 			productReference = 47993E59267EECBE00B20455 /* DeFi Browser.app */;
 			productType = "com.apple.product-type.application";
@@ -166,24 +370,6 @@
 			productReference = 47993E6F267EECC900B20455 /* DeFi BrowserTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		47993E79267EECC900B20455 /* DeFi BrowserUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 47993E89267EECC900B20455 /* Build configuration list for PBXNativeTarget "DeFi BrowserUITests" */;
-			buildPhases = (
-				47993E76267EECC900B20455 /* Sources */,
-				47993E77267EECC900B20455 /* Frameworks */,
-				47993E78267EECC900B20455 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				47993E7C267EECC900B20455 /* PBXTargetDependency */,
-			);
-			name = "DeFi BrowserUITests";
-			productName = "DeFi BrowserUITests";
-			productReference = 47993E7A267EECC900B20455 /* DeFi BrowserUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,10 +386,6 @@
 						CreatedOnToolsVersion = 12.5;
 						TestTargetID = 47993E58267EECBE00B20455;
 					};
-					47993E79267EECC900B20455 = {
-						CreatedOnToolsVersion = 12.5;
-						TestTargetID = 47993E58267EECBE00B20455;
-					};
 				};
 			};
 			buildConfigurationList = 47993E54267EECBE00B20455 /* Build configuration list for PBXProject "DeFi Browser" */;
@@ -215,13 +397,20 @@
 				Base,
 			);
 			mainGroup = 47993E50267EECBE00B20455;
+			packageReferences = (
+				47993E8F267EF65600B20455 /* XCRemoteSwiftPackageReference "CoordinatorKit" */,
+				47993E98267EF8F000B20455 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				470927BD26A2A0E600B54088 /* XCRemoteSwiftPackageReference "Reusable" */,
+				47D5274326B4B8E000768D48 /* XCRemoteSwiftPackageReference "PKHUD" */,
+				4704D41726C0DAE000E4A6F0 /* XCRemoteSwiftPackageReference "SimpleNetwork" */,
+				4704D41A26C0EFF500E4A6F0 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 47993E5A267EECBE00B20455 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				47993E58267EECBE00B20455 /* DeFi Browser */,
 				47993E6E267EECC900B20455 /* DeFi BrowserTests */,
-				47993E79267EECC900B20455 /* DeFi BrowserUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,18 +422,10 @@
 			files = (
 				47993E69267EECC700B20455 /* LaunchScreen.storyboard in Resources */,
 				47993E66267EECC700B20455 /* Assets.xcassets in Resources */,
-				47993E64267EECBE00B20455 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		47993E6D267EECC900B20455 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		47993E78267EECC900B20455 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,9 +439,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47993E61267EECBE00B20455 /* ViewController.swift in Sources */,
+				47D33006269AA7EF00A720D2 /* HomeSearchHeaderView.swift in Sources */,
+				47993E97267EF6C300B20455 /* AppCoordinator.swift in Sources */,
+				470927C426A2A4BC00B54088 /* DefiItem.swift in Sources */,
+				470927B726A27BAB00B54088 /* HomeCoordinator.swift in Sources */,
+				47993E61267EECBE00B20455 /* HomeViewController.swift in Sources */,
+				470927C226A2A3A200B54088 /* CellViewModel.swift in Sources */,
+				47D33046269AB83D00A720D2 /* HomeViewModel.swift in Sources */,
+				47D33008269AAB0E00A720D2 /* SizeToken.swift in Sources */,
+				47D5274726B4BB4F00768D48 /* AssetCatalog.swift in Sources */,
+				47D5275326B5197200768D48 /* CollectionDataSource.swift in Sources */,
+				47D5275526B5241C00768D48 /* DAppCollectionCellView.swift in Sources */,
+				470927BB26A2897800B54088 /* IconLibrary.swift in Sources */,
+				470927CA26A2B18500B54088 /* DAppCellViewModel.swift in Sources */,
 				47993E5D267EECBE00B20455 /* AppDelegate.swift in Sources */,
+				47D5274926B4BF1300768D48 /* StatefulProtocol.swift in Sources */,
+				470927C826A2ABE100B54088 /* CellProtocol.swift in Sources */,
+				47D3304B269ABCFE00A720D2 /* DataSource.swift in Sources */,
+				47993E9D267EFBBC00B20455 /* HomeView.swift in Sources */,
+				470927B926A27BC900B54088 /* HistoryCoordinator.swift in Sources */,
+				470927CC26A2B2D500B54088 /* DAppCellSection.swift in Sources */,
+				47D33003269AA10100A720D2 /* ViewCoding.swift in Sources */,
+				470927B526A27AD500B54088 /* HistoryViewController.swift in Sources */,
 				47993E5F267EECBE00B20455 /* SceneDelegate.swift in Sources */,
+				470927B326A26C7800B54088 /* TabBarViewController.swift in Sources */,
+				470927C626A2AA4B00B54088 /* DAppCellView.swift in Sources */,
+				47D5275026B50BCD00768D48 /* DefiRouter.swift in Sources */,
+				47993E9F267F047400B20455 /* ColorPalette.swift in Sources */,
+				47D5274E26B50A8200768D48 /* DefiService.swift in Sources */,
+				47D33049269ABA0900A720D2 /* TableViewSectionProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,14 +479,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		47993E76267EECC900B20455 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				47993E7F267EECC900B20455 /* DeFi_BrowserUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -288,22 +487,9 @@
 			target = 47993E58267EECBE00B20455 /* DeFi Browser */;
 			targetProxy = 47993E70267EECC900B20455 /* PBXContainerItemProxy */;
 		};
-		47993E7C267EECC900B20455 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 47993E58267EECBE00B20455 /* DeFi Browser */;
-			targetProxy = 47993E7B267EECC900B20455 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		47993E62267EECBE00B20455 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				47993E63267EECBE00B20455 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		47993E67267EECC700B20455 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -436,6 +622,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "DeFi Browser/DeFi Browser.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VY9L7K3A35;
 				INFOPLIST_FILE = "DeFi Browser/Info.plist";
@@ -443,10 +630,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "DanielLimaDF.DeFi-Browser";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -455,6 +644,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "DeFi Browser/DeFi Browser.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VY9L7K3A35;
 				INFOPLIST_FILE = "DeFi Browser/Info.plist";
@@ -462,10 +652,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "DanielLimaDF.DeFi-Browser";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};
@@ -513,46 +705,6 @@
 			};
 			name = Release;
 		};
-		47993E8A267EECC900B20455 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VY9L7K3A35;
-				INFOPLIST_FILE = "DeFi BrowserUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "DanielLimaDF.DeFi-BrowserUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "DeFi Browser";
-			};
-			name = Debug;
-		};
-		47993E8B267EECC900B20455 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VY9L7K3A35;
-				INFOPLIST_FILE = "DeFi BrowserUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "DanielLimaDF.DeFi-BrowserUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "DeFi Browser";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -583,16 +735,91 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		47993E89267EECC900B20455 /* Build configuration list for PBXNativeTarget "DeFi BrowserUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				47993E8A267EECC900B20455 /* Debug */,
-				47993E8B267EECC900B20455 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4704D41726C0DAE000E4A6F0 /* XCRemoteSwiftPackageReference "SimpleNetwork" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DanielLimaDF/SimpleNetwork";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.2;
+			};
+		};
+		4704D41A26C0EFF500E4A6F0 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.1;
+			};
+		};
+		470927BD26A2A0E600B54088 /* XCRemoteSwiftPackageReference "Reusable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/Reusable";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.1;
+			};
+		};
+		47993E8F267EF65600B20455 /* XCRemoteSwiftPackageReference "CoordinatorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bfernandesbfs/CoordinatorKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		47993E98267EF8F000B20455 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		47D5274326B4B8E000768D48 /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4704D41826C0DAE000E4A6F0 /* SimpleNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4704D41726C0DAE000E4A6F0 /* XCRemoteSwiftPackageReference "SimpleNetwork" */;
+			productName = SimpleNetwork;
+		};
+		4704D41B26C0EFF500E4A6F0 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4704D41A26C0EFF500E4A6F0 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		470927BE26A2A0E600B54088 /* Reusable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 470927BD26A2A0E600B54088 /* XCRemoteSwiftPackageReference "Reusable" */;
+			productName = Reusable;
+		};
+		47993E90267EF65600B20455 /* CoordinatorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 47993E8F267EF65600B20455 /* XCRemoteSwiftPackageReference "CoordinatorKit" */;
+			productName = CoordinatorKit;
+		};
+		47993E99267EF8F000B20455 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 47993E98267EF8F000B20455 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		47D5274426B4B8E000768D48 /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 47D5274326B4B8E000768D48 /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 47993E51267EECBE00B20455 /* Project object */;
 }
