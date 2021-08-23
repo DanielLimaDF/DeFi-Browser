@@ -9,8 +9,14 @@ import Foundation
 import SnapKit
 import UIKit
 
+protocol HomeViewDelegate: AnyObject {
+    func didSelectURL(url: URL)
+    func didSelectSearch(text: String)
+}
+
 class HomeView: UIView {
 
+    weak var delegate: HomeViewDelegate?
     var viewModel: HomeViewModelProtocol? {
         didSet {
             update()
@@ -25,9 +31,10 @@ class HomeView: UIView {
     required init() {
         header = HomeSearchHeaderView()
         tableView = UITableView()
-        adapter = DataSource(tableView: tableView)
+        adapter = DataSource(tableView: tableView, collectionOnFirstSection: true)
         super.init(frame: CGRect.zero)
         setupView()
+        header.searchBar.delegate = self
     }
 
     @available(*, unavailable)
@@ -63,7 +70,7 @@ extension HomeView: ViewCoding {
             make.left.equalTo(snp.left).inset(SizeToken.margingMedium)
             make.right.equalTo(snp.right).inset(SizeToken.margingMedium)
             make.top.equalTo(header.snp.bottomMargin)
-            make.bottom.equalTo(snp.bottom)
+            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottomMargin)
         }
     }
 
@@ -73,6 +80,27 @@ extension HomeView: ViewCoding {
         tableView.backgroundColor = ColorPalette.accentColor
         tableView.tableFooterView = UIView()
         tableView.keyboardDismissMode = .onDrag
+        tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
+        tableView.allowsMultipleSelectionDuringEditing = false
     }
 
+}
+
+extension HomeView: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard var text = searchBar.text else {
+            return
+        }
+        
+        searchBar.resignFirstResponder()
+        text = text.replacingOccurrences(of: "http://", with: "https://")
+        
+        if let url = URL(string: text), UIApplication.shared.canOpenURL(url) {
+            delegate?.didSelectURL(url: url)
+            return
+        }
+        
+        delegate?.didSelectSearch(text: text)
+    }
 }

@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  DeFi Browser
+
+  Created by Daniel Lima on 19/08/21.
+  
+*/
+
+/* Home */
+"Home.DAppsSectionTitle" = "DApps";
+"Home.BookmarksSectionTitle" = "Bookmarks";
+
+/* TabBar */
+"Tabbar.Defi" = "DeFi";
+"Tabbar.History" = "History";
+
+/* History */
+"History.Today" = "Today";
+"History.ClearTitle" = "Delete history";
+"History.ClearMessage" = "Are you sure you want to delete all history?";
+"History.ClearCancelButton" = "Cancel";
+"History.ClearConfirmButton" = "Delete all";

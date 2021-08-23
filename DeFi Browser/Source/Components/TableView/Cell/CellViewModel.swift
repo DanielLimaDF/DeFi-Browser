@@ -12,10 +12,12 @@ protocol CellViewModelPrototol {
     var title: String { get }
     var subtitle: String { get }
     var iconURL: String { get }
+    var didAction: (() -> Void)? { get }
 }
 
 struct CellViewModel: CellViewModelPrototol {
     var title: String
     var subtitle: String
     var iconURL: String
+    var didAction: (() -> Void)?
 }

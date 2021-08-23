@@ -60,8 +60,7 @@ extension DAppCellView: ViewCoding {
 
     func render() {
         selectionStyle = .none
-        //backgroundColor = .clear
-        backgroundColor = .red
+        backgroundColor = .clear
 
         collectionView.backgroundColor = .clear
         collectionView.bounces = false

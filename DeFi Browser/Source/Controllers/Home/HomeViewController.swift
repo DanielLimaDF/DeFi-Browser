@@ -6,14 +6,29 @@
 //
 
 import UIKit
-import SwiftUI
 
 class HomeViewController: UIViewController, StatefulProtocol {
 
     let service: DefiService
+    let databaseService: DatabaseService
+    
+    var dApps: [DefiItem] {
+        didSet {
+            update()
+        }
+    }
+    
+    var bookmarks: [DefiItem] {
+        didSet {
+            update()
+        }
+    }
 
-    required init(service: DefiService) {
+    required init(service: DefiService, databaseService: DatabaseService) {
+        dApps = Array()
+        bookmarks = Array()
         self.service = service
+        self.databaseService = databaseService
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -24,6 +39,7 @@ class HomeViewController: UIViewController, StatefulProtocol {
 
     override func loadView() {
         let homeView = HomeView()
+        homeView.delegate = self
         view = homeView
     }
 
@@ -31,6 +47,10 @@ class HomeViewController: UIViewController, StatefulProtocol {
         super.viewDidLoad()
         setupNavigation()
         loadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        loadFromDatabase()
     }
 
     func setupNavigation() {
@@ -43,13 +63,40 @@ class HomeViewController: UIViewController, StatefulProtocol {
         service.defiList { [weak self] result in
             switch result {
             case let .success(values):
-                let model = HomeViewModel(deFiItems: values)
-                (self?.view as? HomeView)?.viewModel = model
+                self?.dApps = values
                 self?.endState()
             case .failure:
                 self?.endStateWithError()
             }
         }
     }
+    
+    func loadFromDatabase() {
+        bookmarks = databaseService.getBookmarks()
+    }
+    
+    func deleteBookmark(item: DefiItem) {
+        databaseService.removeBookmark(item: item)
+        loadFromDatabase()
+    }
+    
+    private func update() {
+        let model = HomeViewModel(deFiItems: dApps, bookmarkItems: bookmarks) { [weak self] action in
+            self?.perform(action: action)
+        }
+        (view as? HomeView)?.viewModel = model
+    }
 
+}
+
+extension HomeViewController: HomeViewDelegate {
+    
+    func didSelectURL(url: URL) {
+        perform(action: HomeAction.goToURL(url: url))
+    }
+    
+    func didSelectSearch(text: String) {
+        perform(action: HomeAction.searchText(text: text))
+    }
+    
 }

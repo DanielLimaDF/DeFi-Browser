@@ -7,12 +7,23 @@
 
 import CoordinatorKit
 import UIKit
+import RealmSwift
 
 final class AppCoordinator: Coordinator {
 
     var rootViewController: UITabBarController
+    let databaseService: DatabaseService
 
     init() {
+        
+        let realmConfig = Realm.Configuration(
+            schemaVersion: 1,
+            shouldCompactOnLaunch: { totalBytes, usedBytes in
+                return (Double(usedBytes) / Double(totalBytes)) < 0.5
+            }
+        )
+        
+        databaseService = DatabaseService(config: realmConfig)
         rootViewController = TabBarViewController()
         start()
     }
@@ -22,11 +33,19 @@ final class AppCoordinator: Coordinator {
     }
 
     private func createCoordinators() -> [Presentable] {
-        let homeCoordinator = HomeCoordinator()
-        let historyCoordinator = HistoryCoordinator()
+        let homeCoordinator = HomeCoordinator(databaseService: databaseService)
+        let historyCoordinator = HistoryCoordinator(databaseService: databaseService)
 
-        homeCoordinator.viewController.tabBarItem = UITabBarItem(title: "DeFi", image: IconLibrary.squareGrid, tag: 0)
-        historyCoordinator.viewController.tabBarItem = UITabBarItem(title: "History", image: IconLibrary.counterclockwiseArrow, tag: 1)
+        homeCoordinator.viewController.tabBarItem = UITabBarItem(
+            title: AppStrings.TabbarDefi.localizedString(),
+            image: IconLibrary.squareGrid,
+            tag: 0
+        )
+        historyCoordinator.viewController.tabBarItem = UITabBarItem(
+            title: AppStrings.TabbarHistory.localizedString(),
+            image: IconLibrary.clock,
+            tag: 1
+        )
 
         return [homeCoordinator, historyCoordinator]
     }

@@ -19,6 +19,10 @@ extension StatefulProtocol {
     func beginState() {
         HUD.show(.rotatingImage(AssetCatalog.progress.image))
     }
+    
+    func beginStateWithTimer(delay: TimeInterval) {
+        HUD.flash(.rotatingImage(AssetCatalog.progress.image), delay: delay)
+    }
 
     func endState() {
         HUD.hide()

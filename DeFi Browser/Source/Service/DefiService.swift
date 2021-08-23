@@ -16,7 +16,7 @@ class DefiService {
         service = SimpleNetwork(networkSession: SimpleNetworkSession())
     }
 
-    internal func defiList(completion: @escaping (Result<[DefiItem], NetworkError>) -> Void) {
+    func defiList(completion: @escaping (Result<[DefiItem], NetworkError>) -> Void) {
         service.execute(request: DefiRouter.list, completion: completion)
     }
 

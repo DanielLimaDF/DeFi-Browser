@@ -43,6 +43,7 @@ extension HomeSearchHeaderView: ViewCoding {
     func render() {
         backgroundColor = ColorPalette.accentColor
         searchBar.searchBarStyle = .minimal
+        searchBar.returnKeyType = .go
     }
 
 }

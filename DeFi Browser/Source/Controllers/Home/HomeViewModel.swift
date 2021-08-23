@@ -17,16 +17,42 @@ struct HomeViewModel: HomeViewModelProtocol {
     var sections: [TableViewSectionProtocol]
     var dappsCount: Int
 
-    init(deFiItems: [DefiItem]) {
+    init(deFiItems: [DefiItem], bookmarkItems: [DefiItem], action: @escaping (HomeAction) -> Void) {
 
-        let deFiViewModels = deFiItems.map{ CellViewModel(title: $0.title, subtitle: $0.description, iconURL: $0.iconURL) }
+        let deFiViewModels = deFiItems.map{ data -> CellViewModel in
+            var model = CellViewModel(
+                title: data.title,
+                subtitle: data.description,
+                iconURL: data.iconURL
+            )
+            
+            model.didAction = {
+                action(.goToItem(defiItem: data))
+            }
+            
+            return model
+        }
         let dAppsViewModels = DAppCellViewModel(models: deFiViewModels)
-        //let favoriteViewModels
+        let bookmarkModels = bookmarkItems.compactMap({ item in
+            CellViewModel(title: item.title, subtitle: item.cleanBaseURL(), iconURL: item.iconURL) {
+                action(.goToItem(defiItem: item))
+            }
+        })
 
-        let dAppsSection = DAppCellSection(title: nil, viewModels: [dAppsViewModels])
-        //let favoriteSection: TableViewSection<FavoriteCellView> = TableViewSection(title: "Bookmarks", viewModels: favoriteViewModels)
+        let dAppsSection = DAppSection(
+            title: AppStrings.HomeDappsSectionTitle.localizedString(),
+            viewModels: [dAppsViewModels]
+        )
+        let bookmarksSection: TableViewSection<BookmarkCellView> = TableViewSection(
+            title: AppStrings.HomeBookmarksSectionTitle.localizedString(),
+            viewModels: bookmarkModels
+        )
+        
+        bookmarksSection.deleteAction = { indexPath in
+            action(.delete(item: bookmarkItems[indexPath.row]))
+        }
 
         dappsCount = deFiViewModels.count
-        sections = [dAppsSection]
+        sections = [dAppsSection, bookmarksSection]
     }
 }

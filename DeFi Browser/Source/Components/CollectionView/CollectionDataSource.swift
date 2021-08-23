@@ -25,12 +25,12 @@ class CollectionViewSection: CollectionViewSectionProtocol {
     var viewModels: [CellViewModelPrototol]
 
     var registerCell: (UICollectionView) -> Void = { collectionView in
-        collectionView.register(cellType: DAppCollectionCellView.self)
+        collectionView.register(cellType: DAppCollectionViewCell.self)
     }
 
     var cellFactory: CellFactory {
         return { collectionView, indexPath in
-            let cell: DAppCollectionCellView = collectionView.dequeueReusableCell(for: indexPath)
+            let cell: DAppCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.viewModel = self.viewModels[indexPath.row]
             return cell
         }
@@ -42,7 +42,8 @@ class CollectionViewSection: CollectionViewSectionProtocol {
     }
 
     func didSelectItem(for indexPath: IndexPath) {
-        print("SELECTED IN COLLECTION \(indexPath.row)")
+        let model = viewModels[indexPath.row]
+        model.didAction?()
     }
 
 }

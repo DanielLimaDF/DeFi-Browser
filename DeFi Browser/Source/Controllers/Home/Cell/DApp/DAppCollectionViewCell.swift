@@ -1,5 +1,5 @@
 //
-//  DAppCollectionCellView.swift
+//  DAppCollectionViewCell.swift
 //  DeFi Browser
 //
 //  Created by daniel.da.cunha.lima on 31/07/21.
@@ -10,7 +10,7 @@ import Kingfisher
 import Reusable
 import UIKit
 
-class DAppCollectionCellView: UICollectionViewCell, Reusable {
+class DAppCollectionViewCell: UICollectionViewCell, Reusable {
 
     var viewModel: CellViewModelPrototol? {
         didSet {
@@ -38,7 +38,7 @@ class DAppCollectionCellView: UICollectionViewCell, Reusable {
 
 }
 
-extension DAppCollectionCellView: ViewCoding {
+extension DAppCollectionViewCell: ViewCoding {
 
     func buildViewHierarchy() {
         addSubview(imageView)
@@ -59,6 +59,7 @@ extension DAppCollectionCellView: ViewCoding {
 
         imageView.layer.cornerRadius = (CGFloat(SizeToken.collectionCellSize) - (CGFloat(SizeToken.margingMedium) * 2)) / 2
         imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFit
     }
 
 }
