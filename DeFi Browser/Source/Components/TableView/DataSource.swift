@@ -65,10 +65,10 @@ extension DataSource: UITableViewDataSource {
         
         if indexPath.section == 0 && isFirstSectionACollection {
             
-            if UIDevice.current.userInterfaceIdiom == .pad {
-                size = SizeToken.collectionCellSize + CGFloat(SizeToken.margingSmall)
-            } else {
+            if UIDevice.current.userInterfaceIdiom == .phone {
                 size = (SizeToken.collectionCellSize * 2) + CGFloat(SizeToken.margingSmall)
+            } else {
+                size = SizeToken.collectionCellSize + CGFloat(SizeToken.margingSmall)
             }
             
             return size

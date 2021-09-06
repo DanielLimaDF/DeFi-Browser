@@ -71,7 +71,7 @@ extension DAppCellView: ViewCoding {
         flowLayout.minimumInteritemSpacing = CGFloat(SizeToken.margingSmall)
         flowLayout.itemSize = CGSize(width: SizeToken.collectionCellSize, height: SizeToken.collectionCellSize)
         
-        if UIDevice.current.userInterfaceIdiom == .pad {
+        if UIDevice.current.userInterfaceIdiom != .phone {
             flowLayout.scrollDirection = .horizontal
             collectionView.bounces = true
         }
