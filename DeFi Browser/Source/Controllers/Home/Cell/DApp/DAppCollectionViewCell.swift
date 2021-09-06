@@ -2,7 +2,7 @@
 //  DAppCollectionViewCell.swift
 //  DeFi Browser
 //
-//  Created by daniel.da.cunha.lima on 31/07/21.
+//  Created by Daniel Lima on 31/07/21.
 //
 
 import Foundation
@@ -59,7 +59,7 @@ extension DAppCollectionViewCell: ViewCoding {
 
         imageView.layer.cornerRadius = (CGFloat(SizeToken.collectionCellSize) - (CGFloat(SizeToken.margingMedium) * 2)) / 2
         imageView.clipsToBounds = true
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
     }
 
 }

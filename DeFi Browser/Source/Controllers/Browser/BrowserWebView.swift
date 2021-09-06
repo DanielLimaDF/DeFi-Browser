@@ -19,7 +19,9 @@ class BrowserWebView: WKWebView {
     weak var delegate: BrowserWebViewDelegate?
     
     init() {
-        super.init(frame: .zero, configuration: WKWebViewConfiguration())
+        let configuration = WKWebViewConfiguration()
+        configuration.processPool = WKProcessPool()
+        super.init(frame: .zero, configuration: configuration)
         navigationDelegate = self
     }
     
@@ -27,7 +29,7 @@ class BrowserWebView: WKWebView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func extractHTML() {
+    internal func extractHTML() {
         let query = "document.documentElement.outerHTML"
         
         evaluateJavaScript(query) { [weak self] (result, error) in

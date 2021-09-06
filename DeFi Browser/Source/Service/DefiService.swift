@@ -2,13 +2,17 @@
 //  DefiService.swift
 //  DeFi Browser
 //
-//  Created by daniel.da.cunha.lima on 31/07/21.
+//  Created by Daniel Lima on 31/07/21.
 //
 
 import Foundation
 import SimpleNetwork
 
-class DefiService {
+protocol DefiServiceProtocol {
+    func defiList(completion: @escaping (Result<[DefiItem], NetworkError>) -> Void)
+}
+
+class DefiService: DefiServiceProtocol {
 
     private let service: SimpleNetwork
 

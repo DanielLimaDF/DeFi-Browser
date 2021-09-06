@@ -2,7 +2,7 @@
 //  DAppCellView.swift
 //  DeFi Browser
 //
-//  Created by daniel.da.cunha.lima on 17/07/21.
+//  Created by Daniel Lima on 17/07/21.
 //
 
 import Foundation
@@ -64,10 +64,17 @@ extension DAppCellView: ViewCoding {
 
         collectionView.backgroundColor = .clear
         collectionView.bounces = false
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.showsHorizontalScrollIndicator = false
 
         flowLayout.minimumLineSpacing = CGFloat(SizeToken.margingSmall)
         flowLayout.minimumInteritemSpacing = CGFloat(SizeToken.margingSmall)
         flowLayout.itemSize = CGSize(width: SizeToken.collectionCellSize, height: SizeToken.collectionCellSize)
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            flowLayout.scrollDirection = .horizontal
+            collectionView.bounces = true
+        }
     }
 
 }

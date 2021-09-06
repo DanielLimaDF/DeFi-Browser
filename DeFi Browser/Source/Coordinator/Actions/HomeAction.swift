@@ -12,7 +12,7 @@ protocol HomeActionProtocol {
     func handle(event: HomeAction)
 }
 
-enum HomeAction: Event {
+enum HomeAction: Event, Equatable {
     
     case goToItem(defiItem: DefiItem)
     case goToURL(url: URL)

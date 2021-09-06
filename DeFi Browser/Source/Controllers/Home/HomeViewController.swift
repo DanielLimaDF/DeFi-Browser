@@ -2,14 +2,14 @@
 //  HomeViewController.swift
 //  DeFi Browser
 //
-//  Created by daniel.da.cunha.lima on 20/06/21.
+//  Created by Daniel Lima on 20/06/21.
 //
 
 import UIKit
 
 class HomeViewController: UIViewController, StatefulProtocol {
 
-    let service: DefiService
+    let service: DefiServiceProtocol
     let databaseService: DatabaseService
     
     var dApps: [DefiItem] {
@@ -24,7 +24,7 @@ class HomeViewController: UIViewController, StatefulProtocol {
         }
     }
 
-    required init(service: DefiService, databaseService: DatabaseService) {
+    required init(service: DefiServiceProtocol, databaseService: DatabaseService) {
         dApps = Array()
         bookmarks = Array()
         self.service = service

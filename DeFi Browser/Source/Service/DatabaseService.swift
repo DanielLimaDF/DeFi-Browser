@@ -19,9 +19,7 @@ class DatabaseService {
             fatalError("Unable to start database")
         }
     }
-}
-
-extension DatabaseService {
+    
     //MARK: - Bookmark
     
     func getBookmarks() -> [DefiItem] {
@@ -71,17 +69,15 @@ extension DatabaseService {
             addBookmark(item: item)
         }
     }
-    
-}
 
-extension DatabaseService {
-    
     //MARK: - History
+    
     func getHistory() -> [HistoryItemDao] {
         var historyItems: [HistoryItemDao] = Array()
         
         let result = realm.objects(HistoryItemDao.self)
         historyItems = result.compactMap({ $0 })
+        historyItems.sort(by: { $0.date > $1.date })
         
         return historyItems
     }

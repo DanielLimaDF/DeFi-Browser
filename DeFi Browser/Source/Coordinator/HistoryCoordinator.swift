@@ -2,7 +2,7 @@
 //  HistoryCoordinator.swift
 //  DeFi Browser
 //
-//  Created by daniel.da.cunha.lima on 16/07/21.
+//  Created by Daniel Lima on 16/07/21.
 //
 
 import CoordinatorKit

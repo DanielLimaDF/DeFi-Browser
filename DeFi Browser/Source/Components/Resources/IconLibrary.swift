@@ -2,7 +2,7 @@
 //  IconLibrary.swift
 //  DeFi Browser
 //
-//  Created by daniel.da.cunha.lima on 17/07/21.
+//  Created by Daniel Lima on 17/07/21.
 //
 
 import Foundation
@@ -18,4 +18,5 @@ enum IconLibrary {
     static let clockwiseArrow = UIImage(systemName: "arrow.clockwise")
     static let minus = UIImage(systemName: "minus.diamond")
     static let trash = UIImage(systemName: "trash.circle")
+    static let questionMark = UIImage(systemName: "questionmark.circle.fill")
 }

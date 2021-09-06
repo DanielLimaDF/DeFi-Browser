@@ -2,7 +2,7 @@
 //  StatefulProtocol.swift
 //  DeFi Browser
 //
-//  Created by daniel.da.cunha.lima on 30/07/21.
+//  Created by Daniel Lima on 30/07/21.
 //
 
 import Foundation

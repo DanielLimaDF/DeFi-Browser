@@ -1,0 +1,41 @@
+[{
+    "title": "PancakeSwap",
+    "iconURL": "https://pancakeswap.finance/logo.png",
+    "description": "Cheaper and faster than Uniswap? Discover PancakeSwap, the leading DEX on Binance Smart Chain (BSC) with the best farms in DeFi and a lottery for CAKE.",
+    "url": "https://pancakeswap.finance"
+}, {
+    "title": "Beefy Finance",
+    "iconURL": "https://beefy.finance/img/beefy.png",
+    "description": "The Multichain Yield Optimizer",
+    "url": "https://app.beefy.finance"
+}, {
+    "title": "SUSHI",
+    "iconURL": "https://app.sushi.com/apple-touch-icon-180x180.png",
+    "description": "Be a DeFi Chef with Sushi. Swap, earn, stack yields, lend, borrow, leverage all on one decentralized, community driven platform. Welcome home to DeFi",
+    "url": "https://app.sushi.com/swap"
+}, {
+    "title": "Uniswap Interface",
+    "iconURL": "https://app.uniswap.org/images/512x512_App_Icon.png",
+    "description": "",
+    "url": "https://app.uniswap.org"
+}, {
+    "title": "1inch - DeFi / DEX aggregator on Ethereum, Polygon and Binance Smart Chain",
+    "iconURL": "https://app.1inch.io/assets/favicon/apple-touch-icon.png",
+    "description": "DeFi / DEX aggregator with the most liquidity and the best rates on Ethereum and Binance Smart Chain, 1inch dApp is an entry point to the 1inch Network's tech.",
+    "url": "https://app.1inch.io"
+}, {
+    "title": "OpenOcean｜Decentralized Full Aggregation Protocol｜All For Your Trading",
+    "iconURL": "https://openocean.finance/apple-touch-icon.png",
+    "description": "OpenOcean is the entrance for one-stop crypto trading on DEXes and CEXes. OpenOcean finds the best price and lowest slippage for traders on aggregated DEXes and CEXes by applying a deeply optimized intelligent routing algorithm.OpenOcean also provides users with APIs to support their specific investment strategy, and provide institutional investors with tailor-made user interfaces.",
+    "url": "https://openocean.finance/classic"
+}, {
+    "title": "BUNNY | No 1. Yield Optimizer",
+    "iconURL": "https://pancakebunny.finance/images/512x512_App_Icon.png",
+    "description": "🐰 Bunny - DeFi yield farming aggregator and optimizer for Binance Smart Chan (BSC) and Ethereum (ETH)",
+    "url": "https://pancakebunny.finance/pool"
+}, {
+    "title": "BakerySwap",
+    "iconURL": "https://www.bakeryswap.org/images/512x512_App_Icon.png",
+    "description": "BakerySwap is the all-in-one DeFi platform that provides both AMM and NFT Marketplace solutions in one place. Users can exchange tokens, provide liquidity, participate in liquidity farming, and also mint NFT and trade them.",
+    "url": "https://www.bakeryswap.org"
+}]

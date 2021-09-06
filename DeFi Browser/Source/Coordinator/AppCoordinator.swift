@@ -2,7 +2,7 @@
 //  AppCoordinator.swift
 //  DeFi Browser
 //
-//  Created by daniel.da.cunha.lima on 20/06/21.
+//  Created by Daniel Lima on 20/06/21.
 //
 
 import CoordinatorKit

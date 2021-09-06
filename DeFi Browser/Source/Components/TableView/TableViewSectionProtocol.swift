@@ -2,7 +2,7 @@
 //  TableViewSection.swift
 //  DeFi Browser
 //
-//  Created by daniel.da.cunha.lima on 11/07/21.
+//  Created by Daniel Lima on 11/07/21.
 //
 
 import Foundation
@@ -66,7 +66,6 @@ class TableViewSection<T: UITableViewCell & CellProtocol & Reusable>: TableViewS
 
     func didSelectRow(for indexPath: IndexPath) {
         let model = viewModels[indexPath.row]
-        print(model.iconURL)
         model.didAction?()
     }
     

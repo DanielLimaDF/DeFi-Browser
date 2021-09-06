@@ -38,8 +38,17 @@ class BookmarkCellView: UITableViewCell, CellProtocol, Reusable {
     }
     
     private func update() {
-        if let model = viewModel, let iconURL = URL(string: model.iconURL) {
-            iconImageView.kf.setImage(with: iconURL)
+        if let model = viewModel {
+            
+            if let iconURL = URL(string: model.iconURL) {
+                iconImageView.kf.setImage(
+                    with: iconURL,
+                    placeholder: IconLibrary.questionMark?.withRenderingMode(.alwaysOriginal).withTintColor(ColorPalette.subtitleTextColor)
+                )
+            } else {
+                iconImageView.image = IconLibrary.questionMark?.withRenderingMode(.alwaysOriginal).withTintColor(ColorPalette.subtitleTextColor)
+            }
+            
             titleLabel.text = model.title
             subtitleLabel.text = model.subtitle
         }
@@ -110,7 +119,7 @@ extension BookmarkCellView: ViewCoding {
 
         iconImageView.layer.cornerRadius = ((CGFloat(SizeToken.collectionCellSize) - (CGFloat(SizeToken.margingMedium) * 2)) * 0.7) / 2
         iconImageView.clipsToBounds = true
-        iconImageView.contentMode = .scaleAspectFit
+        iconImageView.contentMode = .scaleAspectFill
         
         selectionStyle = .none
     }

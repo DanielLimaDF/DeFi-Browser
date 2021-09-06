@@ -2,7 +2,7 @@
 //  DataSource.swift
 //  DeFi Browser
 //
-//  Created by daniel.da.cunha.lima on 11/07/21.
+//  Created by Daniel Lima on 11/07/21.
 //
 
 import Foundation
@@ -61,9 +61,18 @@ extension DataSource: UITableViewDataSource {
 
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 
+        var size: CGFloat = 0
+        
         if indexPath.section == 0 && isFirstSectionACollection {
-            let size = (SizeToken.collectionCellSize * 2) + CGFloat(SizeToken.margingSmall)
+            
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                size = SizeToken.collectionCellSize + CGFloat(SizeToken.margingSmall)
+            } else {
+                size = (SizeToken.collectionCellSize * 2) + CGFloat(SizeToken.margingSmall)
+            }
+            
             return size
+            
         } else {
             return UITableView.automaticDimension
         }
