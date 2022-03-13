@@ -48,14 +48,13 @@ struct HistoryViewModel: HistoryViewModelProtocol {
                 return true
             }
 
-            return s0 < s1
-
+            return s0 > s1
         }
 
     }
 }
 
-extension Date {
+fileprivate extension Date {
     func toString() -> String {
         let dateFormater = DateFormatter()
         dateFormater.timeStyle = .none
@@ -65,12 +64,12 @@ extension Date {
     }
 }
 
-extension String {
-    func toDate() -> Date? {
+fileprivate extension String {
+    func toDate() -> Date {
         let dateFormater = DateFormatter()
         dateFormater.timeStyle = .none
         dateFormater.dateStyle = .long
 
-        return dateFormater.date(from: self)
+        return dateFormater.date(from: self) ?? Date()
     }
 }
