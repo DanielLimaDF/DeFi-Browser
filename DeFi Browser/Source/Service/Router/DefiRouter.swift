@@ -22,7 +22,7 @@ enum DefiRouter: Requestable {
     var path: String {
         switch self {
         case .list:
-            return "https://gist.githubusercontent.com/DanielLimaDF/4f2b319d04ff99950fed9eb4d554d91c/raw/8e36131e13e0dc6117d75c10d917f09918153c85/DeFiList.json"
+            return "https://gist.githubusercontent.com/DanielLimaDF/4f2b319d04ff99950fed9eb4d554d91c/raw/ed48fcb41a2b9e3b1572cd542d78f46dffe697fa/DeFiList.json"
         }
     }
 

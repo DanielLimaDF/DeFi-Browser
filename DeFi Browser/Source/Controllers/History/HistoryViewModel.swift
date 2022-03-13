@@ -42,15 +42,34 @@ struct HistoryViewModel: HistoryViewModelProtocol {
             
             return section
         })
+
+        sections = sections.sorted{
+            guard let s0 = $0.title?.toDate(), let s1 = $1.title?.toDate() else {
+                return true
+            }
+
+            return s0 > s1
+        }
+
     }
 }
 
-extension Date {
+fileprivate extension Date {
     func toString() -> String {
         let dateFormater = DateFormatter()
         dateFormater.timeStyle = .none
         dateFormater.dateStyle = .long
         
         return dateFormater.string(from: self)
+    }
+}
+
+fileprivate extension String {
+    func toDate() -> Date {
+        let dateFormater = DateFormatter()
+        dateFormater.timeStyle = .none
+        dateFormater.dateStyle = .long
+
+        return dateFormater.date(from: self) ?? Date()
     }
 }
